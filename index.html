@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Aşama: HTML5 ve Tablo Dojo'su | SiberDojo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- ÜST SEVİYE VE PUAN BARI -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
+                <i class="fa-solid fa-user-ninja"></i> SİBER<span>DOJO</span>
+            </a>
+            <div class="d-flex align-items-center flex-grow-1 mx-lg-4 my-2 my-lg-0">
+                <span class="badge bg-warning text-dark me-2 fs-6" id="toplamPuanRozet">0 / 100 Puan</span>
+                <progress id="genelIlerlemeBari" value="0" max="100" class="w-100" style="height: 18px;"></progress>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active text-warning fw-bold" href="index.html">1. HTML & Tablo (40P)</a>
+                <a class="nav-link" href="form-dojo.html">2. Form Parametre (30P)</a>
+                <a class="nav-link" href="css-js-dojo.html">3. CSS, JS & Sertifika (30P)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="alert alert-info bg-black text-info border-info">
+            <i class="fa-solid fa-lightbulb"></i> <strong>Nasıl Çalışır?</strong> VS Code'da <code>index.html</code> dosyasını açın. Aşağıdaki 4 görev kutusunun içindeki boş alanlara istenen kodları <strong>kendi elinizle yazıp <code>Ctrl + S</code> yapın.</strong> Kod Koçu yazdığınız kodu anında kontrol edip eksiklerinizi söyleyecektir!
+        </div>
+
+        <!-- =================================================================
+             GÖREV 1: BAŞLIK VE METİN BİÇİMLENDİRME (10 PUAN)
+             ================================================================= -->
+        <section class="dojo-kart mb-4" id="kart-gorev1">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
+                <h4 class="text-warning mb-0">Görev 1: Başlık ve Metin Etiketlerini Kendin Yaz (10 Puan)</h4>
+                <span id="durum-1" class="badge bg-danger">Bekleniyor (0P)</span>
+            </div>
+            <p class="small text-secondary mb-2">
+                <strong>İstenen:</strong> Aşağıdaki <code>id="insa-1"</code> kutusunun içine kendi elinizle şunları yazın:<br>
+1. Bir <code>&lt;h2&gt;</code> başlığı açıp içine kendi Adınızı ve Soyadınızı yazın.<br>
+2. Altına bir <code>&lt;p&gt;</code> paragrafı açıp içinde en az birer tane <code>&lt;strong&gt;</code> (önemli kalın), <code>&lt;mark&gt;</code> (fosforlu), <code>&lt;del&gt;</code> (üstü çizili) ve <code>&lt;sub&gt;</code> (alt simge, örn: H<sub>2</sub>O) etiketi kullanın!
+            </p>
+            <div class="ipucu-kutusu mb-3">
+                💡 <strong>Sözdizimi İpucu:</strong> <code>&lt;h2&gt;...&lt;/h2&gt;</code> | <code>&lt;p&gt;... &lt;strong&gt;...&lt;/strong&gt; &lt;mark&gt;...&lt;/mark&gt; &lt;del&gt;...&lt;/del&gt; H&lt;sub&gt;2&lt;/sub&gt;O &lt;/p&gt;</code>
+            </div>
+
+            <!-- ✍️ ÖĞRENCİ İNŞAAT ALANI 1 -->
+            <div id="insa-1" class="insaat-alani">
+                <!-- ✍️ GÖREV 1 KODLARINIZI BURAYA KENDİ ELİNİZLE YAZIN: -->
+                <h2>Miraç Ali Erdoğdu</h2>
+                <p>Bugün <strong>HTML5 etiketlerini</strong> öğreniyorum, <mark>önemli kısımları</mark> işaretliyorum, <del>eski notu</del> siliyorum ve H<sub>2</sub>O yazıyorum.</p>
+
+            </div>
+            <div id="mesaj-1" class="koc-mesaji mt-2"></div>
+        </section>
+
+        <!-- =================================================================
+             GÖREV 2: SIRALI (<ol>) VE SIRASIZ (<ul>) LİSTE PARAMETRELERİ (10 PUAN)
+             ================================================================= -->
+        <section class="dojo-kart mb-4" id="kart-gorev2">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
+                <h4 class="text-warning mb-0">Görev 2: Liste ve Parametrelerini Kendin Yaz (10 Puan)</h4>
+                <span id="durum-2" class="badge bg-danger">Bekleniyor (0P)</span>
+            </div>
+            <p class="small text-secondary mb-2">
+                <strong>İstenen:</strong> <code>id="insa-2"</code> kutusunun içine kendi elinizle şunları kodlayın:<br>
+1. Büyük harflerle sıralayan (<code>type="A"</code>), 3. harften başlayan (<code>start="3"</code>) ve ters sıralayan (<code>reversed</code>) bir <strong><code>&lt;ol&gt;</code></strong> listesi açın. İçine 3 adet <code>&lt;li&gt;</code> elemanı yazın.<br>
+2. Altına kare işaretli (<code>type="square"</code>) bir <strong><code>&lt;ul&gt;</code></strong> listesi açıp içine 2 adet <code>&lt;li&gt;</code> elemanı yazın.
+            </p>
+            <div class="ipucu-kutusu mb-3">
+                💡 <strong>Sözdizimi İpucu:</strong> <code>&lt;ol type="A" start="3" reversed&gt; &lt;li&gt;...&lt;/li&gt; &lt;/ol&gt;</code>
+            </div>
+
+            <!-- ✍️ ÖĞRENCİ İNŞAAT ALANI 2 -->
+            <div id="insa-2" class="insaat-alani">
+                <!-- ✍️ GÖREV 2 KODLARINIZI BURAYA KENDİ ELİNİZLE YAZIN: -->
+                <ol type="A" start="3" reversed>
+                    <li>Birinci Öğe</li>
+                    <li>İkinci Öğe</li>
+                    <li>Üçüncü Öğe</li>
+                </ol>
+                <ul type="square">
+                    <li>Kare Madde 1</li>
+                    <li>Kare Madde 2</li>
+                </ul>
+
+            </div>
+            <div id="mesaj-2" class="koc-mesaji mt-2"></div>
+        </section>
+
+        <!-- =================================================================
+             GÖREV 3: BAĞLANTI (<a>) VE GÖRSEL (<img>) PARAMETRELERİ (10 PUAN)
+             ================================================================= -->
+        <section class="dojo-kart mb-4" id="kart-gorev3">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
+                <h4 class="text-warning mb-0">Görev 3: Bağlantı ve Görsel Parametrelerini Kendin Yaz (10 Puan)</h4>
+                <span id="durum-3" class="badge bg-danger">Bekleniyor (0P)</span>
+            </div>
+            <p class="small text-secondary mb-2">
+                <strong>İstenen:</strong> <code>id="insa-3"</code> kutusunun içine kendi elinizle şunları kodlayın:<br>
+1. Yeni sekmede açılan (<code>target="_blank"</code>) bir <code>&lt;a href="https://www.meb.gov.tr"&gt;</code> bağlantısı yazın.<br>
+2. E-posta gönderen (<code>href="mailto:..."</code>) ikinci bir <code>&lt;a&gt;</code> bağlantısı yazın.<br>
+3. Bir <code>&lt;img&gt;</code> etiketi açın; <code>src="https://via.placeholder.com/150"</code>, <code>alt="..."</code>, <code>title="..."</code> ve <code>width="150"</code> parametrelerinin tamamını eksiksiz ekleyin!
+            </p>
+            <div class="ipucu-kutusu mb-3">
+                💡 <strong>Sözdizimi İpucu:</strong> <code>&lt;a href="..." target="_blank"&gt;Metin&lt;/a&gt;</code> | <code>&lt;img src="..." alt="..." title="..." width="150"&gt;</code>
+            </div>
+
+            <!-- ✍️ ÖĞRENCİ İNŞAAT ALANI 3 -->
+            <div id="insa-3" class="insaat-alani">
+                <!-- ✍️ GÖREV 3 KODLARINIZI BURAYA KENDİ ELİNİZLE YAZIN: -->
+                <a href="https://www.meb.gov.tr" target="_blank">MEB Sitesi</a>
+                <a href="mailto:erdogdumirac0@gmail.com">E-posta Gönder</a>
+                <img src="https://via.placeholder.com/150" alt="Örnek Görsel" title="Örnek Görsel Başlığı" width="150">
+
+            </div>
+            <div id="mesaj-3" class="koc-mesaji mt-2"></div>
+        </section>
+
+        <!-- =================================================================
+             GÖREV 4: SIFIRDAN TABLO, ROWSPAN VE COLSPAN KODLAMA (10 PUAN)
+             ================================================================= -->
+        <section class="dojo-kart mb-4" id="kart-gorev4">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
+                <h4 class="text-warning mb-0">Görev 4: Sıfırdan <code>&lt;table&gt;</code>, <code>rowspan</code> ve <code>colspan</code> Kodla (10 Puan)</h4>
+                <span id="durum-4" class="badge bg-danger">Bekleniyor (0P)</span>
+            </div>
+            <p class="small text-secondary mb-2">
+                <strong>İstenen:</strong> <code>id="insa-4"</code> kutusunun içine sıfırdan bir tablo kodlayın:<br>
+1. <code>&lt;table border="2" cellpadding="10"&gt;</code> etiketini açın.<br>
+2. İlk satırda (<code>&lt;tr&gt;</code>) 3 sütunu tek parça birleştiren <strong><code>&lt;th colspan="3"&gt;</code></strong> başlığı yazın.<br>
+3. İkinci satırda alt alta 2 satırı birleştiren <strong><code>&lt;td rowspan="2"&gt;</code></strong> hücresi ve yanına iki normal <code>&lt;td&gt;</code> hücresi yazın.<br>
+4. Üçüncü satırda kalan iki adet <code>&lt;td&gt;</code> hücresini yazıp tabloyu kapatın!
+            </p>
+            <div class="ipucu-kutusu mb-3">
+                💡 <strong>Sözdizimi İpucu:</strong> <code>&lt;table border="2" cellpadding="10"&gt; &lt;tr&gt;&lt;th colspan="3"&gt;Başlık&lt;/th&gt;&lt;/tr&gt; ... &lt;/table&gt;</code>
+            </div>
+
+            <!-- ✍️ ÖĞRENCİ İNŞAAT ALANI 4 -->
+            <div id="insa-4" class="insaat-alani">
+                <!-- ✍️ GÖREV 4 TABLO KODLARINIZI BURAYA KENDİ ELİNİZLE YAZIN: -->
+                <table border="2" cellpadding="10">
+                    <tr>
+                        <th colspan="3">Tablo Başlığı</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Birleşik Satır</td>
+                        <td>Hücre 2-2</td>
+                        <td>Hücre 2-3</td>
+                    </tr>
+                    <tr>
+                        <td>Hücre 3-2</td>
+                        <td>Hücre 3-3</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div id="mesaj-4" class="koc-mesaji mt-2"></div>
+        </section>
+
+        <div class="text-end">
+            <a href="form-dojo.html" class="btn btn-warning btn-lg fw-bold text-dark">
+2. Aşamaya Geç: Form Parametre Dojo'su <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
